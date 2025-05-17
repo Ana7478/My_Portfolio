@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <title>My Portfolio</title><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Max's Portfolio</title>
+        <link rel="stylesheet" href="1style.css"> </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">AD.</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">My skills</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>I am Ananya Dey, student at Techno India University</h1>
+                    <p>As a coder with passsion for sustainability, I bring a unique blend of technical skills and evironmental awareness to the table. I'm excited to leverage my expertise to drive positive change and contribute to a more sustainable future.I aim to develop innovative solutions that make a tangible impact on our community and the environment.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-button">Hire Me!</button>
+                        <button class="secondary-button">Download CV</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://png.pngtree.com/png-clipart/20231018/original/pngtree-business-portfolio-3d-character-illustration-png-image_13355679.png" alt="Max's Profile">
+                </div>
+            </div>
+        </section>
+    </section>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <ul class="skills-bar-list">
+                <li>
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="progress html-color" style="width: 95%;">95%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="progress css-color" style="width: 90%;">90%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="progress js-color" style="width: 80%;">80%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-name">React</div>
+                    <div class="skill-bar">
+                        <div class="progress react-color" style="width: 75%;">75%</div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="skill-name">Figma</div>
+                    <div class="skill-bar">
+                        <div class="progress figma-color" style="width: 85%;">85%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-name">Research</div>
+                    <div class="skill-bar">
+                        <div class="progress research-color" style="width: 88%;">88%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-name">Prototyping</div>
+                    <div class="skill-bar">
+                        <div class="progress prototyping-color" style="width: 92%;">92%</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="recent-posts">
+        </section>
+
+        <section class="recent-posts">
+            <div class="container">
+                <h2>Recent posts</h2>
+                <a href="#" class="view-all">View all</a>
+                <div class="posts-grid">
+                    <div class="post-card">
+                        <h3>Urban Eco Living</h3>
+                        <p class="post-meta">12 Dec 2024 | Research, Marketing</p>
+                        <p class="post-excerpt">UrbanEco Living</p>
+                    </div>
+                    <div class="post-card">
+                        <h3>Smartlocal</h3>
+                        <p class="post-meta">Oct 2024| Design</p>
+                        <p class="post-excerpt">SmartLocal is an initiative that empowers local communities through technology and innovation, fostering sustainable development and improving quality of life</p>
+                    </div>
+                    <div class="post-card">
+                        <h3><i class="fa fa-envelope"></i> <a href="mailto:ananyadey205@gmail.com">email</a>ChainWork</h3>
+                        <p class="post-meta">28 Feb 2025 | Canva, Vscode</p>
+                        <p class="post-excerpt">Designed the prototype of the website using Canva and other tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="contact-footer">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-details">
+                <p><i class="fa fa-envelope"></i> <a href="mailto:ananyadey205@gmail.com">email</a></p>
+                <p><i class="fa fa-phone"></i> <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
+                <p><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/ananya-dey-29aa43329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+                </div>
+            <div class="copyright">
+                <p>&copy; 2025 Max. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script> 
+        const hamburger = document.querySelector('.hamburger-icon'); // You'd need this element in your HTML
+        const navMenu = document.querySelector('nav ul');
+        
+        if (hamburger && navMenu) {
+          hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show'); // Add/remove a 'show' class to control visibility in CSS
+          });
+        }
+
+        function updateImageSource() {
+            const windowWidth = window.innerWidth;
+            const defaultImage = 'path/to/your/profile.jpg';
+            const mobileImage = 'path/to/your/profile-mobile.jpg';
+
+            if (profileImage) {
+                profileImage.src = windowWidth < 768 ? mobileImage : defaultImage;
+            }
+        }
+
+    updateImageSource();
+    window.addEventListener('resize', updateImageSource);
+</script>

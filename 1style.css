@@ -1,0 +1,458 @@
+body {
+    font-family: sans-serif; /* Choose your preferred font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+}
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff; /* Example primary color */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.hero p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.hero-buttons button {
+    padding: 12px 24px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.hero-buttons .primary-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hero-buttons .primary-button:hover {
+    background-color: #0056b3;
+}
+
+.hero-buttons .secondary-button {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.hero-buttons .secondary-button:hover {
+    background-color: #e9ecef;
+}
+.hero-image {
+    margin-left: 1000px;
+    flex: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+}
+
+.hero-image img {
+    display: block;
+    width: 130%;
+    height: auto;
+    object-fit: cover; /* Ensure image fills the circle */
+}
+/* Recent Posts Section Styles */
+.recent-posts {
+    padding: 60px 0;
+    background-color: #e9f5f5; /* Light blue background */
+}
+
+.recent-posts .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align "Recent posts" and "View all" */
+}
+
+.recent-posts h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #222;
+}
+.recent-posts .view-all {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: auto; /* Push to the right */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.recent-posts .view-all:hover {
+    color: #0056b3;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px;
+    width: 100%;
+}
+
+.post-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-card .post-meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+.post-card .post-excerpt {
+    color: #555;
+    line-height: 1.5;
+}
+/*features the skillset*/
+.skills {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-align: center;
+}
+
+.skills-bar-list {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.skills-bar-list li {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    background-color: #e9ecef;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 6px;
+    color: white;
+    text-align: right;
+    font-size: 0.75em;
+    line-height: 12px;
+    width: 0%;
+    transition: width 0.8s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 16px 16px;
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 16px 0;
+    }
+}
+
+.progress.html-color {
+    background-color: #e34c26;
+}
+
+.progress.css-color {
+    background-color: #264de4;
+}
+
+.progress.js-color {
+    background-color: #f0db4f;
+    color: #000;
+}
+
+.progress.react-color {
+    background-color: #61dafb;
+    color: #000;
+}
+
+.progress.figma-color {
+    background-color: #f24e1e;
+}
+
+.progress.research-color {
+    background-color: #8ac926;
+}
+
+.progress.prototyping-color {
+    background-color: #1982c4;
+}
+
+/* Featured Works Section Styles */
+.featured-works {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.featured-works h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #222;
+    text-align: left; /* Align with the work card */
+}
+
+.work-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* To contain the rounded corners of the image */
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.work-image {
+    position: relative;
+    width: 300px; /* Fixed width for the image section */
+}
+
+.work-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.work-image .year {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.work-details {
+    padding: 20px;
+    flex-grow: 1; /* Allows details to take remaining space */
+}
+
+.work-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.work-details .work-meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.work-details .work-excerpt {
+    color: #555;
+    line-height: 1.6;
+}
+/* Footer Styles (Basic) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+/* --- Responsive Design using Media Queries --- */
+
+/* For tablets (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .hero-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .work-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+/* Contact Footer Styles */
+.contact-footer {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-footer h2 {
+    font-size: 2.2em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-footer p {
+    color: var(--text-light);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    margin-bottom: 40px;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-details a:hover {
+    color: #0056b3;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    font-size: 1.2em; /* Adjust icon size */
+    color: var(--secondary-color); /* Style the icon */
+}
+
+.contact-footer .copyright {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+        /* CSS (example) */
+        nav ul {
+          display: flex;
+        }
+        
+        .hamburger-icon {
+          display: none; /* Hidden on larger screens */
+          cursor: pointer;
+        }
+        
+        @media (max-width: 767px) {
+          nav ul {
+            display: none; /* Initially hidden on mobile */
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Adjust as needed */
+            left: 0;
+            background-color: #fff; /* Match header background */
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+          }
+        }
